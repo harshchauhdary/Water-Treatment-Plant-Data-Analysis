@@ -8,25 +8,25 @@ The dataset contains daily measurements of different parameters in a water treat
 -   Chlorine: a chemical used to disinfect water
 -   Turbidity: a measure of the amount of suspended particles in the water
 -   Hardness: a measure of the concentration of calcium and magnesium ions in the water
--  Alkalinity: a measure of the water's capacity to neutralize acids
+-   Alkalinity: a measure of the water's capacity to neutralize acids
 -   Chemical dosage (alum-aluminum sulfate and lime-calcium hydroxide): the amount of chemicals added to the water during the treatment process
 -   Chlorine demand: the amount of chlorine required to disinfect the water
 -   UVA: ultraviolet light absorbance, a measure of the amount of UV light absorbed by the water
 -   UVT: ultraviolet transmittance, a measure of the amount of UV light that passes through the water
 
 ## Research Questions
-1. Can we develop a model that accurately predicts turbidity for one day in the future using historical data and various parameters such as pH, chlorine, color, turbidity, hardness, alkalinity, aluminum, temperature, and other relevant factors?
-2. Can we use the predicted turbidity levels to determine the optimal chemical dosage (alum and lime) required for efficient treatment of water at the plant?
-3. What is the relationship between turbidity and other water quality parameters such as chlorine demand, UVA, UVT, and color, and how do these parameters affect turbidity? Can we use this information to improve the accuracy of our turbidity prediction model?
+1. Is there a correlation between turbidity and other water quality parameters, such as chlorine demand, UVA, UVT, and color? How do these parameters affect turbidity?
+2. Can we develop a model that accurately predicts turbidity for one day in the future using historical data and various parameters such as pH, chlorine, UVA, UVT, color, turbidity, hardness, alkalinity, aluminum, temperature, and other relevant factors?
+3. Can we use the predicted turbidity levels to determine the optimal chemical dosage (alum and lime) required for efficient treatment of water at the plant?
 
 ## Models
 **1. Predicting Turbidity(Time Series):** 
-  - SARIMA (Seasonal Autoregressive Integrated Moving Average) can capture the seasonality of the data and make predictions based on the patterns it has learned. In our case, since we are predicting future turbidity levels, which may exhibit seasonality or other time-dependent patterns, SARIMA could be a good choice.
+  - Prophet: Prophet is a time series forecasting model that can capture trends, seasonality, and other time-dependent patterns in the data. Prophet is suitable for this task as it can handle seasonal and trend changes in the data and produce accurate forecasts. Additionally, Prophet has the ability to handle missing values and outliers, which can be common in water quality data.
 
-- STL (Seasonal and Trend decomposition using Loess) decomposition is a method for decomposing time series data into trend, seasonal, and residual components. This could be useful in understanding the patterns of turbidity and how they may be influenced by other parameters. 
+- STL decomposition: Seasonal and Trend decomposition using Loess(STL) decomposition is a method for decomposing time series data into trend, seasonal, and residual components. This could be useful in understanding the patterns of turbidity and how they may be influenced by other parameters. 
 
 **2. Predict Chemical Dosage(Regression):**
 
- - Linear Regression: Linear regression is a simple and widely used model that can effectively capture the linear relationship between the chemical dosage and predicted turbidity.
+ - Random Forest Regressor: Random Forest Regressor is a robust ensemble model that can handle nonlinear relationships between the input features and output variable, making it suitable for predicting optimal chemical dosages based on the turbidity.
     
-- Support Vector Regression (SVR): SVR is particularly useful when the data has a complex, nonlinear relationship. In this case, we can use SVR to model the relationship between turbidity and chemical dosage. 
+- SVR: Support Vector Regression (SVR) is particularly useful when the data has a complex, nonlinear relationship. In this case, we can use SVR to model the relationship between turbidity and chemical dosage. 
