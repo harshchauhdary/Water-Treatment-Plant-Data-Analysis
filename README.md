@@ -28,4 +28,4 @@ The dataset contains daily measurements of different parameters in a water treat
 
  - Random Forest Regressor: Random Forest Regressor is a robust ensemble model that can handle nonlinear relationships between the input features and output variable, making it suitable for predicting optimal chemical dosages based on the turbidity.
     
-- SVR: Support Vector Regression (SVR) is particularly useful when the data has a complex, nonlinear relationship. In this case, we can use SVR to model the relationship between turbidity and chemical dosage. 
+- XGBoost: XGBoost is a powerful algorithm that can handle complex relationships between variables and is often used in regression problems. It can capture non-linear relationships between turbidity and chemical dosage, making it a good choice for predicting the optimal dosage. Additionally, XGBoost is highly scalable and can handle large datasets, which can be useful for our problem.
