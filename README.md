@@ -15,9 +15,8 @@ The dataset contains daily measurements of different parameters in a water treat
 -   UVT: ultraviolet transmittance, a measure of the amount of UV light that passes through the water
 
 ## Research Questions
-1. Is there a correlation between turbidity and other water quality parameters, such as chlorine demand, UVA, UVT, and color? How do these parameters affect turbidity?
-2. Can we develop a model that accurately predicts turbidity for one day in the future using historical data and various parameters such as pH, chlorine, UVA, UVT, color, turbidity, hardness, alkalinity, aluminum, temperature, and other relevant factors?
-3. Can we use the predicted turbidity levels to determine the optimal chemical dosage (alum and lime) required for efficient treatment of water at the plant?
+1. Can we develop a model that accurately predicts turbidity for one day in the future using historical data and various parameters such as pH, chlorine, UVA, UVT, color, turbidity, hardness, alkalinity, aluminum, temperature, and other relevant factors?
+2. Can we use the predicted turbidity levels to determine the optimal chemical dosage (alum and lime) required for efficient treatment of water at the plant?
 
 ## Models
 **1. Predicting Turbidity(Time Series):** 
